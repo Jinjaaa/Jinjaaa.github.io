@@ -1,0 +1,545 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="/assets/common/logo.png">
+        <title>Framingo</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            html{
+                scroll-behavior: smooth;
+            }
+            body {
+                font-family: Quicksand;
+                background-color:#FFFCF3;
+                overflow-x: hidden;
+            }
+
+            nav ul li {
+                color: #1D3557;
+                transition: all 0.2s;
+                border-radius: 5px;
+            }
+
+            nav ul li:hover {
+                color: #1D3557;
+                background-color: #e9edc993;
+                transform: translateY(-3px);
+            }
+            .footer_nav li a{
+                width: fit-content;
+                color: rgb(64, 64, 64);
+                transition: transform 0.4s;
+            }
+            .footer_nav li a:hover{
+                transform: translateX(5px);
+                color: #ce693e;
+            }
+            .card_holder{
+                height: 400px;
+                overflow: hidden;
+                display: flex; 
+                justify-content: center;
+                align-items: center; 
+                object-fit: cover;
+            }
+            @media (max-width: 992px) {
+                .card_holder img{
+                    max-height: fit-content;
+                }
+            }
+            .btn-custom {
+                background-color: #ce693eaf; 
+                color: black; 
+                border: none; 
+                padding: 10px 20px; 
+                border-radius: 5px; 
+                transition: background-color 0.3s, transform 0.3s; 
+            }
+
+            .btn-custom:hover {
+                background-color: #ce693e;
+                color: white; 
+                transform: translateY(-3px); 
+            }
+            /* Input Boxes */
+            .input-box{
+                width: 100%;
+                height: 50px;
+                font-size: 16px;
+                font-style: italic;
+                color: #000000;
+                border: 2px solid #7eff8400;   
+                border-radius: 4px;
+            }
+            /* Inside Input Boxes */
+            .input-box input{
+                width: 100%;
+                height: 100%;
+                border: none;
+                outline: none;
+                padding: 0 10px 0 10px;
+                background-color: rgba(255, 253, 253, 0);
+                font-size: 14px;
+            }
+            .input-dropdown select{
+                width: 100%;
+                height: 50px;
+                font-size: 14px;
+                border: none;   
+                padding: 0 10px 0 10px;
+                margin: 0px 0;
+            }
+            .submit{
+                border: none;
+                outline: none;
+                height: 45px;
+                width: 100%;
+                border-radius: 5px;
+                transition: .4s;
+            }
+            .submit:hover{
+                background: #e9edc9;
+            }   
+            .modal-confirm {		
+                color: #636363;
+                width: 325px;
+                font-size: 14px;
+            }
+            .modal-confirm .modal-content {
+                padding: 20px;
+                border-radius: 5px;
+                border: none;
+            }
+            .modal-confirm .modal-header {
+                border-bottom: none;   
+                position: relative;
+            }   
+            .modal-confirm h4 {
+                text-align: center;
+                font-size: 26px;
+                margin: 30px 0 -15px;
+            }
+            .modal-confirm .form-control, .modal-confirm .btn {
+                min-height: 40px;
+                border-radius: 3px; 
+            }
+            .modal-confirm .close {
+                position: absolute;
+                top: -5px;
+                right: -5px;
+            }	
+            .modal-confirm .modal-footer {
+                border: none;
+                text-align: center;
+                border-radius: 5px;
+                font-size: 13px;
+            }	
+            .modal-confirm .icon-box {
+                color: #fff;		
+                position: absolute;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+                top: -70px;
+                width: 95px;
+                height: 95px;
+                border-radius: 50%;
+                z-index: 9;
+                background: #82ce34;
+                padding: 15px;
+                text-align: center;
+                box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+            }
+            .modal-confirm .icon-box i {
+                font-size: 58px;
+                position: relative;
+                top: 3px;
+            }
+            .modal-confirm.modal-dialog {
+                margin-top: 80px;
+            }
+            .modal-confirm .btn {
+                color: #fff;
+                border-radius: 4px;
+                background: #82ce34;
+                text-decoration: none;
+                transition: all 0.4s;
+                line-height: normal;
+                width: 100%;
+                border: none;
+            }
+            .modal-confirm .btn:hover, .modal-confirm .btn:focus {
+                background: #6fb32b;
+                outline: none;
+            }
+            .trigger-btn {
+                display: inline-block;
+                margin: 100px auto;
+            }
+            .txt_adjust{
+                font-size: clamp(10px, 3.3vw, 1.2rem);
+            }
+        </style>
+    </head>
+
+    <body id="navi">
+        <!---navigation-->
+        <div class="container-fluid border-2 border-bottom border-black  "
+            style="position: sticky;top: 0;  z-index: 1030; background-color: #FFFCF3;">
+            <nav class="navbar navbar-expand-lg " style="position: sticky;top: 0;  z-index: 1030; ">
+                <div class="container-md ">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="./assets/common/logo.png" alt="Logo" width="70" height="70" class="d-inline-block ">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 fw-bold mb-lg-0 w-100 d-flex justify-content-center ">
+                            <li class="nav-item px-2 mx-2">
+                                <a class="nav-link " aria-current="page" href="home.html">Home</a>
+                            </li>
+                            <li class="nav-item px-2 mx-2 " style="background-color: #E9EDC9; border-radius: 5px;">
+                                <a class="nav-link active" href="menu.html">Menu</a>
+                            </li>
+                            <li class="nav-item dropdown px-2 mx-2">
+                                <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    About Us
+                                </a>
+                                <ul class="dropdown-menu ">
+                                    <li class="nav-item px-2 mx-2">
+                                        <a class="nav-link" href="about.html">Our Story</a>
+                                    </li>
+                                    <li class="nav-item px-2 mx-2">
+                                        <a class="nav-link" href="members.html">Our Members</a>
+                                    </li>
+                                    <li class="nav-item px-2 mx-2">
+                                        <a class="nav-link " href="contact.html">Our Contact</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown px-2 mx-2">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Customer
+                                </a>
+                                <ul class="dropdown-menu ">
+                                    <li class="nav-item px-2 mx-2">
+                                        <a class="nav-link" href="reviews.html">Reviews</a>
+                                    </li>
+                                    <li class="nav-item px-2 mx-2">
+                                        <a class="nav-link" href="profile.html">Profile</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <a class="px-2 mx-2" style="text-decoration: none; color: #1D3557; cursor: pointer;">
+                            <i class="fa-solid fa-magnifying-glass"></i></a>
+                            <a href="nextPage.html" class="px-2 mx-2" style="text-decoration: none; color: #1D3557; cursor: pointer;">
+                                <i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container-md mt-5 mb-5 ">
+            <div class="row "> 
+                <div class="col-md-8 col-sm-12" style="margin-top: -35px;" >
+                    <div class="card mt-3;  border border-1 shadow-sm" style="border: 1px solidrgb(154, 154, 154)0; background-color: white;">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4" style="color: #B64E21; font-size: 30px; font-weight: 900;">Shopping Cart</h5>
+                            <div class="row">
+                                <div class="col-md-5 col-sm-3 fw-bold">
+                                    Product
+                                </div>
+                                <div class="col-sm-2 fw-bold">
+                                    Price
+                                </div>
+                                <div class="col-sm-2 fw-bold">
+                                    Quantity
+                                </div>
+                                <div class="col-sm-3 fw-bold">
+                                    Total
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 mt-1 text-white mx-auto">
+                                    <div class="border-bottom border_custom mx-3 mx-lg-0 mx-md-0" style="border-color: rgb(157, 156, 163) !important"></div>
+                                </div>  
+                                <div id="cart"></div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 mt-1 text-white mx-auto">
+                                    <div class="border-bottom border_custom mx-3 mx-lg-0 mx-md-0" style="border-color: rgb(157, 156, 163) !important"></div>
+                                </div>  
+                            </div>
+                            <div class="row mt-2 mb-2">
+                                <div id="total"></div>
+                                <div>Delivery Fee: Free</div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-2 mt-1 text-white">
+                                <div class="border-bottom border_custom mx-3 mx-lg-0 mx-md-0" style="border-color: rgb(157, 156, 163) !important"></div>
+                            </div>  
+                            <div id="total-final" class="mt-2 fw-bold"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm " style="margin-top: -35px;">
+                    <div class="card mt-3;" style="border: 1px solid #9a9a9a;">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4" style="color: #B64E21; font-size: 30px; font-weight: 900;">Payment Info</h5>
+                            <div class="row">
+                        <form id="checkout-form">
+                            <p>Payment Method:</p> 
+                            </div>
+                            <div class="input-radio">
+                                <input type="radio" id="cc" name="payment" value="cc" required>                 
+                                <label for="payment">Credit Card</label>  <br><br>         
+                                <input type="radio" id="gc" name="payment" value="gc">
+                                <label for="payment">Gcash</label>     
+                            </div>
+                            <div class="input-name mt-3">
+                                <label for="name">Name on Card:</label>
+                                <div class="input-box">
+                                    <input type="text" id="name" name="name" placeholder="Enter Name" required>
+                                </div>
+                            </div>
+                            <div class="form-item mt-3">
+                                <label for="card_number">Card Number:</label>
+                                <div class="input-box">
+                                    <input type="number" id="card_number" name="card_number" placeholder="Enter Card Number" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-4">
+                                    <div class="input-text mt-3">
+                                        <label for="cvv">CVV:</label>
+                                        <div class="input-box">
+                                            <input type="text" id="cvv" name="cvv" placeholder="Enter CVV" required maxlength="3">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4" style="margin-top: 16px">
+                                    <label for="month">Expiration</label>
+                                    <!-- Month Dropdown -->
+                                    <div class="input-dropdown">
+                                        <select id="month" required>
+                                            <option value="">Month</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-4" style="margin-top: 16px">
+                                    <!-- Year Dropdown -->
+                                    <div class="input-dropdown mt-4">
+                                        <select id="year" required>
+                                            <option value="">Year</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <button type="submit" class="submit" data-toggle="modal" data-target="#checkoutModal">
+                                    Check Out
+                                </button>
+                            </div>
+                        </form>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+        <div id="checkoutModal" class="modal fade">
+            <div class="modal-dialog modal-confirm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-check"></i>
+                        </div>				
+                        <h4 class="modal-title w-100">Awesome!</h4>	
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-center">Order Successful. Thanks for buying. We hope to see you again in the future.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="home.html" class="btn btn-success btn-block" data-dismiss="modal">OK</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>     
+
+        <!----footer-->
+        <div class="container-fluid text-center  d-flex justify-content-center  py-5 border-2 border-top border-black" style="background-color: #FFFCF3;">
+            <div class=" row container-md fw-bold">
+                <div class="col-md-4 " id="f0">
+                    <a href="home.html#navi" style="font-family: Pacifico; text-decoration: none; color: #1D3557;"><h1 >Framingo</a></h1>
+                    <p class="text-body-secondary">The Perfect Blend Of Food & Drink</p>
+                </div>
+                <div class="col-3 " id="f1">
+                    <ul style="list-style: none; text-transform:uppercase; " class="footer_nav">
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="menu.html" >Menu</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="about.html">Our Story</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="members.html">Members</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3 " id="f2">
+                    <ul style="list-style: none; text-transform:uppercase; " class="footer_nav">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reviews.html">Blog and Reviews</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="col-2 " id="f3">
+                    <ul style="list-style: none; text-transform:uppercase; display: flex; justify-content: center;" class="footer_nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-brands fa-facebook fs-2  mx-2"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-brands fa-instagram fs-2 mx-2"></i></a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <hr class="my-4">
+                <p class="text-body-secondary"><small>© Framingo, All Right Reserved.</small></p>
+            </div>
+        
+
+    </body>
+    <script>
+
+        window.onload = function() {
+            // Get the cart from localStorage
+            var cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Initialize total price
+            var totalPrice = 0;
+
+            // Get the cart element
+            var cartElement = document.getElementById('cart');
+
+            // Loop through each item in the cart
+            for (var i = 0; i < cart.length; i++) {
+                // Get the current item
+                var item = cart[i];
+
+                var itemTotal = item.price * item.quantity
+                // Create a new row for the item
+                var row = document.createElement('div');
+                row.className = 'row';
+
+                // Create the HTML for the item
+                var itemHTML = `
+                    <!-- Product Column -->
+                    <div class="col-md-5 col-sm-3 mt-3 d-flex">
+                        <img src="${item.image}" alt="${item.name}" style="height: 100%; width: 40%"> <h5 class="ps-2"> ${item.name}</h5>
+                    </div>
+                    <!-- Price Column -->
+                    <div class="col col-sm-2 mt-3">
+                        <p>₱${item.price}</p>
+                    </div>
+
+                    <!-- Quantity Column -->
+                    <div class="col col-sm-2 mt-3">
+                        <p>${item.quantity}</p>
+                    </div>
+
+                    <!-- Total Item Price Column -->
+                    <div class="col col-sm-3 mt-3">
+                        <p>₱${itemTotal}</p>
+                    </div>
+                `;
+
+                // Set the HTML of the row
+                row.innerHTML = itemHTML;
+
+                // Append the row to the cart
+                cartElement.appendChild(row);
+
+                // Add item price to total price
+                totalPrice += item.price * item.quantity;
+            }
+
+            // Display total price
+            document.getElementById('total').innerText = 'Subtotal: ₱' + totalPrice;
+            document.getElementById('total-final').innerText = 'Total: ₱' + totalPrice;
+
+            // Generate month options
+            var monthSelect = document.getElementById('month');
+            for (var i = 1; i <= 12; i++) {
+                var option = document.createElement('option');
+                option.value = i;
+                option.text = i;
+                monthSelect.appendChild(option);
+            }
+
+            // Generate year options
+            var yearSelect = document.getElementById('year');
+            var currentYear = new Date().getFullYear();
+            for (var i = currentYear; i >= currentYear - 100; i--) {
+                var option = document.createElement('option');
+                option.value = i;
+                option.text = i;
+                yearSelect.appendChild(option);
+            };
+
+        };
+
+            document.getElementById('checkout-form').addEventListener('submit', function(event) {
+            // Get the card number input
+            event.preventDefault();
+            var cardNumber = document.getElementById('card_number').value;
+
+            // Check if the card number is exactly 16 digits
+            if (cardNumber.length !== 16) {
+                // Prevent the form from submitting
+                event.preventDefault();
+
+                // Alert the user
+                alert('Please enter a card number with exactly 16 digits.');
+            }else {
+                jQuery('#checkoutModal').modal('show');
+                localStorage.clear();
+            }
+        });
+
+
+    </script>
+    </html>

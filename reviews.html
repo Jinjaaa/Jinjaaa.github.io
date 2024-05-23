@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="/assets/common/logo.png">
+    <title>Framingo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Quicksand;
+            background-color: #FFFCF3;
+            overflow-x: hidden;
+        }
+
+        nav ul li {
+            color: #1D3557;
+            transition: all 0.2s;
+            border-radius: 5px;
+        }
+
+        nav ul li:hover {
+            color: #1D3557;
+            background-color: #e9edc993;
+
+            transform: translateY(-3px);
+        }
+
+        .footer_nav li a {
+            width: fit-content;
+            color: rgb(104, 104, 104);
+            transition: transform 0.4s;
+        }
+
+        .footer_nav li a:hover {
+            transform: translateX(5px);
+            color: #ce693e;
+        }
+
+        .bg_move {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.749), rgba(0, 0, 0, 0.185)), url(/assets/common/b2.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            height: 70vh;
+            width: 100%;
+            /* Ensure it takes full width */
+            background-position: center;
+            /* Center the image */
+        }
+
+        #textt {
+            animation: downn 1.5s ease;
+        }
+
+        #buttonn {
+            transition: all 0.3s;
+            background-color: transparent;
+            border: none;
+            color: #624b4b;
+            border: 2px solid #624b4b;
+            border-radius: 5px;
+        }
+
+        #buttonn:hover {
+            border: #B64E21;
+            color: white;
+            background-color: #B64E21;
+
+        }
+
+        @media (max-width:768px) {
+
+            #f1,
+            #f2 {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body id="navi">
+    <!---navigation-->
+    <div class="container-fluid border-2 border-bottom border-black  "
+        style="position: sticky;top: 0;  z-index: 1030; background-color: #FFFCF3;">
+        <nav class="navbar navbar-expand-lg " style="position: sticky;top: 0;  z-index: 1030; ">
+            <div class="container-md ">
+                <a class="navbar-brand" href="home.html">
+                    <img src="/assets/common/logo.png" alt="Logo" width="70" height="70" class="d-inline-block ">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 fw-bold mb-lg-0 w-100 d-flex justify-content-center ">
+                        <li class="nav-item px-2 mx-2">
+                            <a class="nav-link " aria-current="page" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item px-2 mx-2 ">
+                            <a class="nav-link" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item dropdown px-2 mx-2">
+                            <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                About Us
+                            </a>
+                            <ul class="dropdown-menu ">
+                                <li class="nav-item px-2 mx-2">
+                                    <a class="nav-link" href="about.html">Our Story</a>
+                                </li>
+                                <li class="nav-item px-2 mx-2">
+                                    <a class="nav-link" href="members.html">Our Members</a>
+                                </li>
+                                <li class="nav-item px-2 mx-2">
+                                    <a class="nav-link " href="contact.html">Our Contact</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown px-2 mx-2" style="background-color: #E9EDC9; border-radius: 5px;">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Customer
+                            </a>
+                            <ul class="dropdown-menu ">
+                                <li class="nav-item px-2 mx-2" style="background-color: #E9EDC9; border-radius: 5px;">
+                                    <a class="nav-link" href="reviews.html">Reviews</a>
+                                </li>
+                                <li class="nav-item px-2 mx-2">
+                                    <a class="nav-link" href="profile.html">Profile</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <a class="px-2 mx-2" style="text-decoration: none; color: #1D3557; cursor: pointer;"><i
+                            class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!---breadcrumbs-->
+    <div class="container-fluid my-4">
+        <div class="container-md">
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+                aria-label="breadcrumb">
+                <ol class="breadcrumb fw-bold">
+                    <li class="breadcrumb-item"><a href="home.html"
+                            style="color: #ce693e; text-decoration: none; ">Home</a></li>
+                    <li class="breadcrumb-item"><a href="home.html"
+                            style="color: #ce693e; text-decoration: none; ">Customer</a></li>
+                    <li class="breadcrumb-item active text-body-secondary" aria-current="page">Reviews</li>
+                </ol>
+            </nav>
+            <hr style=" border: 1px solid #D4A373;">
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex justify-content-center align-items-center my-5 py-5  text-center"
+        style="background-color: #D4A373;">
+        <div>
+            <p style="font-family: Pacifico; font-size: 30px;color: #ffffff;" id="textt">
+                <font style="font-family: Pacifico;font-size: 30px;">Blog </font>
+                <font style="font-family: Playfair;font-size: 20px;"><i>and</i></font> Reviews<br>
+                <font style="font-family: quicksand ;font-size: 20px;">We're excited to hear your thoughts and feedback.
+                </font>
+            </p>
+            <hr style="border: 3px solid #fef8f5; margin-left: 45%;margin-right: 45%;">
+        </div>
+    </div>
+
+    <!---reviews-->
+    <div class="container-fluid d-flex justify-content-center">
+        <div class="row container-md d-flex justify-content-center">
+            <div class="col-sm-6 my-3">
+                <div class="card shadow">
+                    <div class="card-header bg-warning-subtle">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fs-3" style="font-family: Pacifico;">Elyza Tagle</h5>
+                        <p class="text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i></p>
+                        <p class="card-text "><i class="fa-solid fa-quote-left"></i>Super love it!Ang sarap ng bawat
+                            flavors💗 Sa
+                            mga mahilig sa matcha you should try their Matcho frappe ang sarap talaga 🥺✨
+                            <i class="fa-solid fa-quote-left"></i>
+                        </p>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            See Images
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Images uploaded by Elyza
+                                            Tagle</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="/assets/review/r1.jpg" class="w-100 img-fluid my-2">
+
+                                        <img src="/assets/review/r2.jpg" class="w-100 img-fluid">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 my-3">
+                <div class="card shadow">
+                    <div class="card-header bg-warning-subtle">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fs-3" style="font-family: Pacifico;">Natasha Santos </h5>
+                        <p class="text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i></p>
+                        <p class="card-text "><i class="fa-solid fa-quote-left"></i>Masarap yung drinks. Would
+                            definitely order again even if I live at QC temporarily and will go back to Rizal after
+                            renovation ng bahay namin. <i class="fa-solid fa-quote-left"></i></p>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop1">
+                            See Images
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Images uploaded by Natasha
+                                            Santos </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="/assets/review/r3.jpg" class="w-100 img-fluid my-2">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 my-3">
+                <div class="card shadow">
+                    <div class="card-header bg-warning-subtle">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fs-3" style="font-family: Pacifico;">Louella Nika Fortuno Aurelio</h5>
+                        <p class="text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i></p>
+                        <p class="card-text"><i class="fa-solid fa-quote-left"></i> Kung pwede lang saakin to araw araw
+                            haha 😂🥺 ANG SARAAAP PO TALAGAAA NG MIXXY NILA PROMISEEEE ❤️😍😘 nakakaalis stress sa
+                            work..<i class="fa-solid fa-quote-right"></i></p>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop2">
+                            See Images
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Images uploaded by Louella
+                                            Nika Fortuno Aurelio </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="/assets/review/r4.jpg" class="w-100 img-fluid my-2">
+                                        <img src="/assets/review/r5.jpg" class="w-100 img-fluid my-2">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 my-3">
+                <div class="card shadow">
+                    <div class="card-header bg-warning-subtle">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fs-3" style="font-family: Pacifico;">Jhienel Acani Ong
+                        </h5>
+                        <p class="text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i></p>
+                        <p class="card-text "><i class="fa-solid fa-quote-left"></i> highly recommended super saraaaaap
+                            walang halong eme!💯 solid tlga try nyo guys sulit ang ibabayad nyo😍💕 <i
+                                class="fa-solid fa-quote-right"></i></p>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop4">
+                            See Images
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Images uploaded by Jhienel
+                                            Acani Ong
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="/assets/review/r6.jpg " class="w-100 img-fluid my-2">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid d-flex justify-content-center my-5">
+        <div class="container-md px-4">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="font-weight: bold;">
+                            More Reviews...
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h1 style="font-family: Pacifico;">Framingo</h1>
+                            <p class="text-warning">5.0 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i></p>
+                            <hr>
+                            <h5 class="card-title fs-5">Barbie Ong
+                            </h5>
+                            <p class="text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></p>
+                            <p class="card-text text-body-secondary"><i class="fa-solid fa-quote-left"></i> legit na
+                                milktea! napakasarap ng timpla ang generous pati ng mga add ons at cmpre sobrang bait ng
+                                owner👏🏻💯 <i class="fa-solid fa-quote-right"></i>
+                            </p>
+                            <hr>
+                            <h5 class="card-title fs-5">Kulas Gonzales
+                            </h5>
+                            <p class="text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></p>
+                            <p class="card-text text-body-secondary"><i class="fa-solid fa-quote-left"></i> Sobrang solid po ng mga frappé nyo Ms Yumi! Bang for the buck! Pwede nang maskip ng starbucks lalo na pandemic. ☺️👌
+                                Sa uulitin po! ♥️ <i class="fa-solid fa-quote-right"></i>
+                            </p>
+                            <hr>
+
+                            <h5 class="card-title fs-5">Rylle Fernandez
+                            </h5>
+                            <p class="text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></p>
+                            <p class="card-text text-body-secondary"><i class="fa-solid fa-quote-left"></i> Perfect kaylangan kutsarahin ung cheese cake pamatay ung lasa🥰🥰🥰 try na<i class="fa-solid fa-quote-right"></i>
+                            </p>
+                            <hr>
+
+                            <h5 class="card-title fs-5">Persis Neshamah Adecer Cruz
+                            </h5>
+                            <p class="text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></p>
+                            <p class="card-text text-body-secondary"><i class="fa-solid fa-quote-left"></i> Masarap naman. Sulit para sa 120 yung order ko. Sana lang pag ppick upin. Dun nalang sa kanto ng iskinita. Kasi nakakatakot ung lugar nila esp. Pag gabi. 😊 Parang gubat. Sana next time meet up nalang sa kanto ng eskinita 😉😁<i class="fa-solid fa-quote-right"></i>
+                            </p>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----footer-->
+    <div class="container-fluid text-center  d-flex justify-content-center  py-5 border-2 border-top border-black">
+        <div class=" row container-md fw-bold">
+            <div class="col-md-4 " id="f0">
+                <a href="home.html#navi" style="font-family: Pacifico; text-decoration: none; color: #1D3557;">
+                    <h1>Framingo
+                </a></h1>
+                <p class="text-body-secondary">The Perfect Blend Of Food & Drink</p>
+            </div>
+            <div class="col-3  d-flex justify-content-center " id="f1">
+                <div>
+                    <ul style="list-style: none; text-transform:capitalize; " class="footer_nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"
+                                style="transform: none; color: #1D3557 ; cursor:default; font-size: 20px; margin-bottom: 10px;">NAVIGATION</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="about.html">Our Story</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="members.html">Members</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reviews.html">Reviews</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-3  d-flex justify-content-center  text-start " id="f2">
+                <div>
+                    <ul style="list-style: none; text-transform: capitalize;" class="footer_nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"
+                                style="transform: none; color: #1D3557 ; cursor:default; font-size: 20px; margin-bottom: 10px;">ABOUT
+                                FRAMINGO</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="#">FAQ</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">sponsor</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Privacy policy</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">cookies</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-2 " id="f3">
+
+                <ul style="list-style: none; text-transform:uppercase; display: flex; justify-content: center;"
+                    class="footer_nav">
+                    <div>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"
+                                style="transform: none; color: #1D3557 ; cursor:default; font-size: 20px; margin-bottom: 10px;">Follow
+                                Us</a>
+                        </li>
+                        <div class="d-flex">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.facebook.com/framingoph"><i class="fa-brands fa-facebook fs-2  mx-2"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-brands fa-instagram fs-2 mx-2"></i></a>
+                            </li>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+            <hr class="my-4">
+            <p class="text-body-secondary"><small>© Framingo, All Right Reserved.</small></p>
+        </div>
+    </div>
+</body>
+
+</html>

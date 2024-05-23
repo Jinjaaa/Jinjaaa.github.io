@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="/assets/common/logo.png">
+    <title>Framingo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Quicksand;
+            background-color: #eaeaea5c;
+            overflow-x: hidden;
+        }
+
+        nav ul li {
+            color: #1D3557;
+            transition: all 0.2s;
+            border-radius: 5px;
+        }
+
+        nav ul li:hover {
+            color: #1D3557;
+            background-color: #e9edc993;
+            transform: translateY(-3px);
+        }
+        .footer_nav li a{
+            width: fit-content;
+            color: rgb(64, 64, 64);
+            transition: transform 0.4s;
+        }
+        .footer_nav li a:hover{
+            transform: translateX(5px);
+            color: #ce693e;
+        }
+
+        nav ul li:hover {
+            color: #1D3557;
+            background-color: #e9edc993;
+
+            transform: translateY(-3px);
+        }
+
+        .footer_nav li a {
+            width: fit-content;
+            color: rgb(104, 104, 104);
+            transition: transform 0.4s;
+        }
+
+        .footer_nav li a:hover {
+            transform: translateX(5px);
+            color: #ce693e;
+        }
+
+        .card_holder{
+            height: 400px;
+            overflow: hidden;
+            display: flex; 
+            justify-content: center;
+            align-items: center; 
+            object-fit: cover;
+        }
+        @media (max-width: 992px) {
+            .card_holder img{
+                max-height: fit-content;
+            }
+        }
+        .btn-custom {
+            background-color: #ce693eaf; 
+            color: black; 
+            border: none; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            transition: background-color 0.3s, transform 0.3s; 
+        }
+
+        .btn-custom:hover {
+            background-color: #ce693e;
+            color: white; 
+            transform: translateY(-3px); 
+        }
+
+        .profile-card {
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          width: auto;
+          margin-bottom: 20px;
+          text-decoration: none;
+        }
+
+        .profile-card {
+          border: 1px solid #ccc;
+          padding: 20px;
+          transition: transform 0.3s ease-in-out;
+
+        }
+
+        .profile-card:hover {
+          transform: scale(1.05);
+        }
+
+        #guestName {
+          text-align: center;
+        }
+
+        input[type="text"] {
+          text-align: center;
+          width: 100%;
+          padding: 5px;
+          box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body id="navi">
+   
+     <!---navigation-->
+     <!---navigation-->
+     <div class="container-fluid border-2 border-bottom border-black  "
+     style="position: sticky;top: 0;  z-index: 1030; background-color: #FFFCF3;">
+     <nav class="navbar navbar-expand-lg " style="position: sticky;top: 0;  z-index: 1030; ">
+         <div class="container-md ">
+             <a class="navbar-brand" href="home.html">
+                 <img src="/assets/common/logo.png" alt="Logo" width="70" height="70" class="d-inline-block ">
+             </a>
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                 aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                 <ul class="navbar-nav me-auto mb-2 fw-bold mb-lg-0 w-100 d-flex justify-content-center ">
+                     <li class="nav-item px-2 mx-2">
+                         <a class="nav-link " aria-current="page" href="home.html">Home</a>
+                     </li>
+                     <li class="nav-item px-2 mx-2 ">
+                         <a class="nav-link" href="menu.html">Menu</a>
+                     </li>
+                     <li class="nav-item dropdown px-2 mx-2">
+                         <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"
+                             aria-expanded="false">
+                             About Us
+                         </a>
+                         <ul class="dropdown-menu ">
+                             <li class="nav-item px-2 mx-2">
+                                 <a class="nav-link" href="about.html">Our Story</a>
+                             </li>
+                             <li class="nav-item px-2 mx-2">
+                                 <a class="nav-link" href="members.html">Our Members</a>
+                             </li>
+                             <li class="nav-item px-2 mx-2">
+                                 <a class="nav-link " href="contact.html">Our Contact</a>
+                             </li>
+                         </ul>
+                     </li>
+
+                     <li class="nav-item dropdown px-2 mx-2">
+                         <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                             aria-expanded="false">
+                             Customer
+                         </a>
+                         <ul class="dropdown-menu ">
+                             <li class="nav-item px-2 mx-2" style="background-color: #E9EDC9; border-radius: 5px;">
+                                 <a class="nav-link" href="reviews.html">Reviews</a>
+                             </li>
+                             <li class="nav-item px-2 mx-2">
+                                 <a class="nav-link" href="profile.html">Profile</a>
+                             </li>
+                         </ul>
+                     </li>
+
+                 </ul>
+                 <a class="px-2 mx-2" style="text-decoration: none; color: #1D3557; cursor: pointer;"><i
+                         class="fa-solid fa-magnifying-glass"></i></a>
+             </div>
+         </div>
+     </nav>
+ </div>
+
+ </div>
+ 
+    <!---breadcrumbs-->
+    <div class="bodyid=navi">
+    <div class="container-fluid py-4">
+        <div class="container-md ">
+            <nav
+                style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+                aria-label="breadcrumb">
+                <ol class="breadcrumb fw-bold">
+                    <li class="breadcrumb-item"><a href="home.html"
+                            style="color: #ce693e; text-decoration: none; ">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#"
+                            style="color: #ce693e;text-decoration: none; ">Customer</a></li>
+                    <li class="breadcrumb-item active text-body-secondary" aria-current="page">Profile</li>
+                </ol>
+            </nav>
+            <hr style=" border: 1px solid #D4A373;">
+        </div>
+    </div>
+    <div class="mb-3"></div>
+    <br>
+
+    <div class="container-md">
+      <div class="profile-card">
+          <div class="profile-picture">
+              <img src="assets/common/profile.jpg" alt="Profile Picture" class="img-fluid mb-4" style="width: 150px; border-radius: 50%; border: 3px solid #000000; display: block; margin: 0 auto;">
+          </div>
+          <h2 class="text-center" id="guestName">Guest_001</h2>
+      </div>
+  </div>
+  
+
+
+    <div class="container-md">
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <div class="profile-card">
+                    <a href="cart.html" style="text-decoration: none; color: #1D3557;">
+                        <img src="assets/common/cart.png" class="img-fluid" style="width: 100px;">
+                        <h6 class="mt-3">Shopping Cart</h6>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-3 text-center">
+                <div class="profile-card">
+                    <a href="cart.html" style="text-decoration: none; color: #1D3557;">
+                        <img src="assets/common/pay.png" class="img-fluid" style="width: 100px;">
+                        <h6 class="mt-3">To pay</h6>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-3 text-center">
+                <div class="profile-card">
+                    <a href="reviews.html" style="text-decoration: none; color: #1D3557;">
+                        <img src="assets/common/review.png" class="img-fluid" style="width: 100px;">
+                        <h6 class="mt-3">Reviews</h6>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-3 text-center">
+                <div class="profile-card">
+                    <a href="contact.html" style="text-decoration: none; color: #1D3557;">
+                        <img src="assets/common/customer.png" class="img-fluid" style="width: 100px;">
+                        <h6 class="mt-3">Customer care</h6>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mb-5"></div>
+<br>
+<br>
+
+    
+
+    <!----footer-->
+    <div class="container-fluid text-center  d-flex justify-content-center  py-5 border-2 border-top border-black"
+                style="background-color: #FFFCF3;">
+        <div class=" row container-md fw-bold">
+            <div class="col-md-4 " id="f0">
+                <a href="home.html#navi" style="font-family: Pacifico; text-decoration: none; color: #1D3557;">
+                    <h1>Framingo
+                </a></h1>
+                <p class="text-body-secondary">The Perfect Blend Of Food & Drink</p>
+            </div>
+            <div class="col-3  d-flex justify-content-center " id="f1">
+                <div>
+                    <ul style="list-style: none; text-transform:capitalize; " class="footer_nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"
+                                style="transform: none; color: #1D3557 ; cursor:default; font-size: 20px; margin-bottom: 10px;">NAVIGATION</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="about.html">Our Story</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Members</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reviews.html">Reviews</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-3  d-flex justify-content-center  text-start " id="f2">
+                <div>
+                    <ul style="list-style: none; text-transform: capitalize;" class="footer_nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"
+                                style="transform: none; color: #1D3557 ; cursor:default; font-size: 20px; margin-bottom: 10px;">ABOUT
+                                FRAMINGO</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="#">FAQ</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">sponsor</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Privacy policy</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">cookies</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-2 " id="f3">
+
+                <ul style="list-style: none; text-transform:uppercase; display: flex; justify-content: center;"
+                    class="footer_nav">
+                    <div>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"
+                                style="transform: none; color: #1D3557 ; cursor:default; font-size: 20px; margin-bottom: 10px;">Follow
+                                Us</a>
+                        </li>
+                        <div class="d-flex">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.facebook.com/framingoph"><i class="fa-brands fa-facebook fs-2  mx-2"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-brands fa-instagram fs-2 mx-2"></i></a>
+                            </li>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+            <hr class="my-4">
+            <p class="text-body-secondary"><small>© Framingo, All Right Reserved.</small></p>
+        </div>
+    </div>
+    
+    <script>
+        // JavaScript code to make the guest name editable
+        var guestNameElement = document.getElementById('guestName');
+
+        guestNameElement.addEventListener('click', function () {
+            var nameInput = document.createElement('input');
+            nameInput.type = 'text';
+            nameInput.value = this.textContent;
+
+            nameInput.addEventListener('blur', function () {
+                var newName = this.value.trim();
+                if (newName !== "") {
+                    guestNameElement.textContent = newName;
+                }
+                this.parentNode.replaceChild(guestNameElement, this);
+            });
+
+            this.parentNode.replaceChild(nameInput, this);
+            nameInput.focus();
+        });
+    </script>
+
+</body>
+</html>

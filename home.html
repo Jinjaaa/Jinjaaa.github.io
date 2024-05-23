@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="/assets/common/logo.png">
+    <title>Framingo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Quicksand;
+            background-color: #FFFCF3;
+            overflow-x: hidden;
+        }
+
+        nav ul li {
+            color: #1D3557;
+            transition: all 0.2s;
+            border-radius: 5px;
+        }
+
+        nav ul li:hover {
+            color: #1D3557;
+            background-color: #e9edc993;
+
+            transform: translateY(-3px);
+        }
+        
+
+        #btn_view {
+            background-color: #B64E21;
+            color: white;
+            width: 10rem;
+            padding: 5px;
+            border-radius: 24px;
+            border: none;
+            transition: all 0.3s;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.166);
+        }
+
+        #btn_view:hover {
+            background-color: white;
+            color: #1D3557;
+            transform: scale(1.05);
+        }
+
+        #col_1 {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .carousel-image-wrapper {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .carousel-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .custom-tooltip {
+        --bs-tooltip-bg: var(--bd-violet-bg);
+        --bs-tooltip-color: var(--bs-dark);
+        }
+        :root {
+      --bd-violet-bg: #fcfcdd; 
+      --bs-tooltip-bg: var(--bd-violet-bg); 
+      --bs-tooltip-color: #000; 
+    }
+            #f0,
+            #f1,
+            #f2,
+            #f3{
+                text-align: left;
+            }
+        @media (max-width: 992px) {
+            .carousel-image-wrapper {
+                max-height: 400px;
+            }
+
+            #col_1 {
+                height: fit-content;
+            }
+            
+
+        }
+        .footer_nav li a {
+            width: fit-content;
+            color: rgb(104, 104, 104);
+            transition: transform 0.4s;
+        }
+
+        .footer_nav li a:hover {
+            transform: translateX(5px);
+            color: #ce693e;
+        }
+        @media (max-width:768px) {
+            #f1,#f2{
+            width: 50%;
+           }
+        }
+    </style>
+</head>
+
+<body id="navi">
+    <!---navigation-->
+    <div class="container-fluid border-2 border-bottom border-black  "
+        style="position: sticky;top: 0;  z-index: 1030; background-color: #FFFCF3;" >
+        <nav class="navbar navbar-expand-lg " style="position: sticky;top: 0;  z-index: 1030; ">
+            <div class="container-md ">
+                <a class="navbar-brand" href="home.html">
+                    <img src="/assets/common/logo.png" alt="Logo" width="70" height="70" class="d-inline-block ">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 fw-bold mb-lg-0 w-100 d-flex justify-content-center ">
+                        <li class="nav-item px-2 mx-2" style="background-color: #E9EDC9; border-radius: 5px;">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item px-2 mx-2 ">
+                            <a class="nav-link" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item dropdown px-2 mx-2">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              About Us
+                            </a>
+                            <ul class="dropdown-menu ">
+                                <li class="nav-item px-2 mx-2">
+                                    <a class="nav-link" href="about.html">Our Story</a>
+                                </li>
+                                <li class="nav-item px-2 mx-2">
+                                    <a class="nav-link" href="members.html">Our Members</a>
+                                </li>
+                                <li class="nav-item px-2 mx-2">
+                                    <a class="nav-link" href="contact.html">Our Contact</a>
+                                </li>
+                            </ul>
+                          </li>
+                        
+                          <li class="nav-item dropdown px-2 mx-2">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Customer
+                            </a>
+                            <ul class="dropdown-menu ">
+                                <li class="nav-item px-2 mx-2">
+                                    <a class="nav-link" href="reviews.html">Reviews</a>
+                                </li>
+                                <li class="nav-item px-2 mx-2">
+                                    <a class="nav-link" href="profile.html">Profile</a>
+                                </li>
+                            </ul>
+                          </li>
+
+                    </ul>
+                    <a class="px-2 mx-2" style="text-decoration: none; color: #1D3557; cursor: pointer;"><i
+                            class="fa-solid fa-magnifying-glass"></i></a>
+                            <a href="cart.html" class="px-2 mx-2" style="text-decoration: none; color: #1D3557; cursor: pointer;">
+                                <i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!---carousel-->
+    <div class="container-fluid d-flex justify-content-center" style="background-color: #fffefd;">
+    <div class="row container-md"  >
+        <div class="col-lg-6 text-center" id="col_1">
+            <div class="my-5 mx-5">
+                <h1 class="fs-1" style="color: #624b4b; font-family:Playfair; font-weight: lighter;">
+                    <strong><i><small>The </small></i><span style="color: #B64E21; font-family: Pacifico;">Perfect
+                            Blend</span><i><small> Of <br>Food & Drink.</small></i></strong>
+                </h1>
+                <br>
+                <p class="mx-5">Discover the perfect blend of exquisite food and refreshing drinks at Framingo, where
+                    every meal is a masterpiece.</p>
+                <br>
+                <a href="menu.html"><button id="btn_view" class="fw-bold">View Menu</button></a>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class=" container-md p-0 my-4">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner rounded-1">
+                        <div class="carousel-item active">
+                            <div class="carousel-image-wrapper">
+                                <img src="/assets/common/home3.jpg" class="d-block w-100 img-fluid" alt="...">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-image-wrapper">
+                                <img src="/assets/common/home1.jpg" class="d-block w-100 img-fluid" alt="...">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-image-wrapper">
+                                <img src="/assets/common/home6.jpg" class="d-block w-100 img-fluid" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!----menu-->
+    <div class="row mt-5">
+        <div class="col-12">
+            <h2 class="text-center" style="font-family: Playfair; font-size: 25px;"><i>Taste Our </i>
+                <font style="color: #B64E21; font-family: Pacifico;font-size: 40px;"> Favorite</font>
+            </h2>
+            <hr style="border: 2px solid #B64E21; margin-left: 45%;margin-right: 45%;" >
+        </div>
+    </div>
+    <div class="container-fluid d-flex justify-content-center my-5">
+        <div class="row container-md d-flex justify-content-center">
+            <div class="col-md-3 d-flex justify-content-center mb-3">
+                <div class="card shadow-sm">
+                    <img src="/assets/common/a6.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-text" style="font-family: Playfair;"><i>Jalea Quezo</i></h5>
+                        <p class="card-text text-danger">₱90.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center mb-3">
+                <div class="card shadow-sm">
+                    <img src="/assets/common/a7.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-text" style="font-family: Playfair;"><i>Muscovado Classico</i></h5>
+                        <p class="card-text text-danger">₱75.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center mb-3">
+                <div class="card shadow-sm">
+                    <img src="/assets/common/homee5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-text" style="font-family: Playfair;"><i>Creamy Carbonara</i></h5>
+                        <p class="card-text text-danger">₱120.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center mb-3">
+                <div class="card shadow-sm">
+                    <img src="/assets/common/a5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-text " style="font-family: Playfair;"><i>Fried Rice with Siomai</i></h5>
+                        <p class="card-text text-danger">₱90.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid d-flex justify-content-center mb-5">
+        <div class="row container-md d-flex justify-content-center">
+            <div class="col-12  d-flex justify-content-center">
+                <a href="menu.html" style="text-decoration: none; color: #624b4b;"><button type="button"
+                    style="width: 20rem; padding: 1rem; background-color: transparent; border-color: #624b4b; color: #624b4b;"
+                    class="border-2 btn btn-primary position-relative">
+                    <strong class="fs-5 fw-medium">View All Products</strong>
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                        <span class="visually-hidden">New alerts</span>
+                    </span>
+                </button></a>
+            </div>
+        </div>
+    </div>
+
+    <!----Content-->
+    <div class="container-fluid  d-flex justify-content-center py-5" style="background-color: #fffefd;">
+        <div class="row container-md d-flex justify-content-around">
+            <div class="col-md-4 d-flex justify-content-center my-3">
+                <div class="card text-bg-dark " style="border: none;">
+                    <img src="/assets/common/a4.jpg" class="card-img" alt="...">
+                    <div class="card-img-overlay d-flex justify-content-center text-center align-items-center">
+                        <div>
+                            <p class="card-title fs-4" style="font-family: Playfair;">
+                                <i>Family Owned</i>
+                                <br>
+                                <strong style="font-family: Quicksand; font-weight: 700;">BRAND</strong>
+                                <br>
+                                <i class="fa-solid fa-minus"></i>
+                            </p>
+
+                            <p class="card-text  "><a href="about.html" data-bs-toggle="tooltip" data-bs-title="Welcome to our story page—dive into captivating tales with just a click!"
+                                    class="text-light alert-link " data-bs-placement="right" data-bs-custom-class="custom-tooltip" >Read Our Story</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4  d-flex justify-content-center my-3">
+                <div class="card text-bg-dark " style="border: none;">
+                    <img src="/assets/common/a2.jpg" class="card-img" alt="...">
+                    <div class="card-img-overlay d-flex justify-content-center text-center align-items-center">
+                        <div>
+                            <p class="card-title fs-3" style="font-family: Playfair;">
+                                <i>Meet the</i>
+                                <br>
+                                <strong style="font-family: Quicksand; font-weight: 700;">MEMBERS</strong>
+                                <br>
+                                <i class="fa-solid fa-minus"></i>
+                            </p>
+
+                            <p class="card-text  "><a href="members.html" data-bs-toggle="tooltip" data-bs-title="Click me to  meet the vibrant members of Framingo,"
+                                class="text-light alert-link " data-bs-placement="right" data-bs-custom-class="custom-tooltip" >Meet Our People</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center my-3">
+                <div class="card text-bg-dark " style="border: none;">
+                    <img src="/assets/common/a3.jpg" class="card-img" alt="...">
+                    <div class="card-img-overlay d-flex justify-content-center text-center align-items-center">
+                        <div>
+                            <p class="card-title fs-4" style="font-family: Playfair;">
+                                <i>Talk with</i>
+                                <br>
+                                <strong style="font-family: Quicksand; font-weight: 700;">FRAMINGO</strong>
+                                <br>
+                                <i class="fa-solid fa-minus"></i>
+                            </p>
+
+                            <p class="card-text  "><a href="contact.html" data-bs-toggle="tooltip" data-bs-title="Get in touch with us on our contact page—your feedback and inquiries are always welcome!"
+                                class="text-light alert-link " data-bs-placement="right" data-bs-custom-class="custom-tooltip" >Contact Us</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+     <!----footer-->
+     <div class="container-fluid text-center  d-flex justify-content-center  py-5 border-2 border-top border-black">
+        <div class=" row container-md fw-bold">
+            <div class="col-md-4 " id="f0">
+                <a href="home.html#navi" style="font-family: Pacifico; text-decoration: none; color: #1D3557;">
+                    <h1>Framingo
+                </a></h1>
+                <p class="text-body-secondary">The Perfect Blend Of Food & Drink</p>
+            </div>
+            <div class="col-3  d-flex justify-content-center " id="f1">
+                <div>
+                    <ul style="list-style: none; text-transform:capitalize; " class="footer_nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"
+                                style="transform: none; color: #1D3557 ; cursor:default; font-size: 20px; margin-bottom: 10px;">NAVIGATION</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="about.html">Our Story</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="members.html">Members</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reviews.html">Reviews</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-3  d-flex justify-content-center  text-start " id="f2">
+                <div>
+                    <ul style="list-style: none; text-transform: capitalize;" class="footer_nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"
+                                style="transform: none; color: #1D3557 ; cursor:default; font-size: 20px; margin-bottom: 10px;">ABOUT
+                                FRAMINGO</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="#">FAQ</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">sponsor</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Privacy policy</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">cookies</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-2 " id="f3">
+
+                <ul style="list-style: none; text-transform:uppercase; display: flex; justify-content: center;"
+                    class="footer_nav">
+                    <div>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"
+                                style="transform: none; color: #1D3557 ; cursor:default; font-size: 20px; margin-bottom: 10px;">Follow
+                                Us</a>
+                        </li>
+                        <div class="d-flex">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.facebook.com/framingoph"><i class="fa-brands fa-facebook fs-2  mx-2"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-brands fa-instagram fs-2 mx-2"></i></a>
+                            </li>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+            <hr class="my-4">
+            <p class="text-body-secondary"><small>© Framingo, All Right Reserved.</small></p>
+        </div>
+    </div>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+</body>
+
+</html>

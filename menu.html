@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="assets/common/logo.png">
+    <title>Framingo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Quicksand;
+            background-color: #FFFCF3;
+            overflow-x: hidden;
+        }
+
+        nav ul li {
+            color: #1D3557;
+            transition: all 0.2s;
+            border-radius: 5px;
+        }
+
+        nav ul li:hover {
+            color: #1D3557;
+            background-color: #e9edc993;
+
+            transform: translateY(-3px);
+        }
+
+        .footer_nav li a {
+            width: fit-content;
+            color: rgb(104, 104, 104);
+            transition: transform 0.4s;
+        }
+
+        .footer_nav li a:hover {
+            transform: translateX(5px);
+            color: #ce693e;
+        }
+
+        .bg_move {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.749), rgba(0, 0, 0, 0.185)), url(assets/common/b2.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            height: 70vh;
+            width: 100%;
+            /* Ensure it takes full width */
+            background-position: center;
+            /* Center the image */
+        }
+
+        #textt {
+            animation: downn 1.5s ease;
+        }
+        #buttonn{
+            transition: all 0.3s;
+            background-color: transparent; 
+            border: none; 
+            color: #624b4b;
+             border: 2px solid #624b4b;
+              border-radius: 5px;
+        }
+        #buttonn:hover{
+            border: #B64E21;
+            color: white;
+            background-color: #B64E21;
+            
+        }
+        .nav-pills .nav-link.active{
+            background-color: #E9EDC9;
+            color: #e60d0d;
+            font-weight: 700;
+        }
+        @media (max-width:768px) {
+            
+            #f1,
+            #f2 {
+                width: 50%;
+            }
+        }
+
+        @keyframes downn {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body id="navi">
+    <!---navigation-->
+    <div class="container-fluid border-2 border-bottom border-black  "
+        style="position: sticky;top: 0;  z-index: 1030; background-color: #FFFCF3;">
+        <nav class="navbar navbar-expand-lg " style="position: sticky;top: 0;  z-index: 1030; ">
+            <div class="container-md ">
+                <a class="navbar-brand" href="home.html">
+                    <img src="assets/common/logo.png" alt="Logo" width="70" height="70" class="d-inline-block ">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 fw-bold mb-lg-0 w-100 d-flex justify-content-center ">
+                        <li class="nav-item px-2 mx-2">
+                            <a class="nav-link " aria-current="page" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item px-2 mx-2 " style="background-color: #E9EDC9; border-radius: 5px;">
+                            <a class="nav-link active" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item dropdown px-2 mx-2">
+                            <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                About Us
+                            </a>
+                            <ul class="dropdown-menu ">
+                                <li class="nav-item px-2 mx-2">
+                                    <a class="nav-link" href="about.html">Our Story</a>
+                                </li>
+                                <li class="nav-item px-2 mx-2">
+                                    <a class="nav-link" href="members.html">Our Members</a>
+                                </li>
+                                <li class="nav-item px-2 mx-2">
+                                    <a class="nav-link " href="contact.html">Our Contact</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown px-2 mx-2">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Customer
+                            </a>
+                            <ul class="dropdown-menu ">
+                                <li class="nav-item px-2 mx-2">
+                                    <a class="nav-link" href="reviews.html">Reviews</a>
+                                </li>
+                                <li class="nav-item px-2 mx-2">
+                                    <a class="nav-link" href="profile.html">Profile</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <a class="px-2 mx-2" style="text-decoration: none; color: #1D3557; cursor: pointer;"><i
+                            class="fa-solid fa-magnifying-glass"></i></a>
+                            <a href="cart.html" class="px-2 mx-2" style="text-decoration: none; color: #1D3557; cursor: pointer;">
+                                <i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container-fluid d-flex justify-content-center align-items-center my-5 bg_move text-light text-center">
+        <p style="font-family: Pacifico; font-size: 40px;" id="textt">
+            <font style="font-family: Playfair;font-size: 30px;">Welcome to</font> Our Menu!<br>
+            <font style="font-family: quicksand ;font-size: 20px;">Take your time browsing through our selection of
+                delectable dishes.</font>
+        </p>
+    </div>
+
+    <!---breadcrumbs-->
+    <div class="container-fluid ">
+        <div class="container-md">
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+                aria-label="breadcrumb">
+                <ol class="breadcrumb fw-bold">
+                    <li class="breadcrumb-item"><a href="home.html"
+                            style="color: #ce693e; text-decoration: none; ">Home</a></li>
+                    <li class="breadcrumb-item active text-body-secondary" aria-current="page">Menu</li>
+                </ol>
+            </nav>
+            <hr style=" border: 1px solid #D4A373;">
+        </div>
+    </div>
+
+    <!---Meals-->
+    <div class="container-fluid">
+        <div class="container-md ">
+            <div class="row">
+                <div class="col-lg-4" data-bs-theme="dark">
+                    <nav id="navbar" class="h-100 flex-column align-items-stretch pe-4 border-end">
+                        <nav class="nav nav-pills flex-column" style="position: sticky; top: 15%; z-index: 1000;">
+                            <a class="nav-link " href="#item-1-2" style="color: #ce693e;">Meals & Snacks</a>
+                            <nav class="nav nav-pills flex-column">
+                                <a class="nav-link ms-3 my-1" style="color: #ce693e;" href="#item-1-2">Silog</a>
+                                <a class="nav-link ms-3 my-1" style="color: #ce693e;" href="#item-2">Snacks</a>
+                            </nav>
+                            <a class="nav-link" href="#item-3" style="color: #ce693e;">Beverages</a>
+                            <a class="nav-link" href="#item-4" style="color: #ce693e;">Desserts</a>
+                        </nav>
+                    </nav>
+                </div>
+
+                <div class="col-lg-8">
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true"
+                        class="scrollspy-example-2" tabindex="0">
+                        <div id="item-1">
+                            <h2 class="text-center py-3" style="font-family: Playfair; font-size: 25px;"><i>Taste
+                                    Our</i>
+                                <font style="color: #B64E21; font-family: Pacifico;font-size: 40px;"> Meals & Snacks
+                                </font>
+                            </h2>
+                         </div>
+                         <!---silog-->
+                        <div id="item-1-1">
+                            <font style="color: #B64E21; font-family: Pacifico;font-size: 30px;"> Silog Meals
+                            </font>
+                            <hr style="border: 2px solid #B64E21;" class="mb-5">
+                            <div class="card-group mb-5" style="gap: 0px 5px;">
+                                <div class="card">
+                                    <img src="assets/common/b1.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="font-family: Playfair;font-style: italic; ">Chicken Silog</h5>
+                                        <p class="card-text"  style="color: #ff0000;">₱ 115.00</p>
+                                        <a  style="color:#fff1e2; font-family: Quicksand; text-decoration: none; font-size: 17px; font-weight: 600;">
+                                            <button id="buttonn" class=" fw-medium" data-bs-toggle="popover" data-bs-title="Added to Cart!" data-bs-content="Click Cart to see orders ">
+                                                Add to Cart
+                                            </button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="assets/common/b4.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="font-family: Playfair;font-style: italic; ">Tapa Silog</h5>
+                                        <p class="card-text"  style="color: red;">₱ 115.00</p>
+                                        <a  style="color:#fff1e2; font-family: Quicksand; text-decoration: none; font-size: 17px; font-weight: 600;">
+                                            <button id="buttonn" class=" fw-medium" data-bs-toggle="popover" data-bs-title="Added to Cart!" data-bs-content="Click Cart to see orders ">
+                                                Add to Cart
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="assets/common/b5.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="font-family: Playfair;font-style: italic; ">Wings Silog</h5>
+                                        <p class="card-text"  style="color: red;">₱ 115.00</p>
+                                        <a  style="color:#fff1e2; font-family: Quicksand; text-decoration: none; font-size: 17px; font-weight: 600;">
+                                            <button id="buttonn" class=" fw-medium" data-bs-toggle="popover" data-bs-title="Added to Cart!" data-bs-content="Click Cart to see orders ">
+                                                Add to Cart
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!----snack-->
+                        <div id="item-1-2">
+                            <font style="color: #B64E21; font-family: Pacifico;font-size: 30px;"> Snacks
+                            </font>
+                            <hr style="border: 2px solid #B64E21;" class="mb-5">
+                            <div class="card-group" style="gap: 0px 5px;">
+                                <div class="card">
+                                    <img src="assets/common/s1.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="font-family: Playfair;font-style: italic; ">Fries</h5>
+                                        <p class="card-text" style="color: red;">₱ 85.00</p>
+                                        <a  style="color:#fff1e2; font-family: Quicksand; text-decoration: none; font-size: 17px; font-weight: 600;">
+                                            <button id="buttonn" class=" fw-medium" data-bs-toggle="popover" data-bs-title="Added to Cart!" data-bs-content="Click Cart to see orders ">
+                                                Add to Cart
+                                            </button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="assets/common/s2.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="font-family: Playfair;font-style: italic; ">Nuggets</h5>
+                                        <p class="card-text" style="color: red;">₱ 125.00</p>
+                                        <a  style="color:#fff1e2; font-family: Quicksand; text-decoration: none; font-size: 17px; font-weight: 600;">
+                                            <button id="buttonn" class=" fw-medium" data-bs-toggle="popover" data-bs-title="Added to Cart!" data-bs-content="Click Cart to see orders ">
+                                                Add to Cart
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="assets/common/s3.jpeg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="font-family: Playfair;font-style: italic; ">Mojos</h5>
+                                        <p class="card-text" style="color: red;">₱ 90.00</p>
+                                        <a  style="color:#fff1e2; font-family: Quicksand; text-decoration: none; font-size: 17px; font-weight: 600;">
+                                            <button id="buttonn" class=" fw-medium" data-bs-toggle="popover" data-bs-title="Added to Cart!" data-bs-content="Click Cart to see orders ">
+                                                Add to Cart
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Beverages -->
+                        <div id="item-2" class="mt-5">
+                            <h2 class="text-center py-3" style="font-family: Playfair; font-size: 25px;"><i>Enjoy
+                                Our</i>
+                            <font style="color: #B64E21; font-family: Pacifico;font-size: 40px;"> Refreshment
+                            </font>
+                            </h2>
+                            <font style="color: #B64E21; font-family: Pacifico;font-size: 30px;"> Beverages
+                            </font>
+                            <hr style="border: 2px solid #B64E21;" class="mb-5">
+                            <div class="card-group" style="gap: 0px 5px;">
+                                <div class="card">
+                                    <img src="assets/common/a7.jpg" class="card-img-top h-fluid" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="font-family: Playfair;font-style: italic; ">Muscavado Classico</h5>
+                                        <p class="card-text" style="color: red;">₱ 75.00</p>
+                                        <a  style="color:#fff1e2; font-family: Quicksand; text-decoration: none; font-size: 17px; font-weight: 600;">
+                                            <button id="buttonn" class=" fw-medium" data-bs-toggle="popover" data-bs-title="Added to Cart!" data-bs-content="Click Cart to see orders ">
+                                                Add to Cart
+                                            </button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="assets/common/d2.jpg" class="card-img-top h-fluid" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="font-family: Playfair;font-style: italic; ">ChocoMik</h5>
+                                        <p class="card-text" style="color: red;">₱ 75.00</p>
+                                        <a  style="color:#fff1e2; font-family: Quicksand; text-decoration: none; font-size: 17px; font-weight: 600;">
+                                            <button id="buttonn" class=" fw-medium" data-bs-toggle="popover" data-bs-title="Added to Cart!" data-bs-content="Click Cart to see orders ">
+                                                Add to Cart
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="assets/common/a6.jpg" class="card-img-top h-fluid" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="font-family: Playfair;font-style: italic; ">Jalea Quezo</h5>
+                                        <p class="card-text" style="color: red;">₱ 90.00</p>
+                                        <a  style="color:#fff1e2; font-family: Quicksand; text-decoration: none; font-size: 17px; font-weight: 600;">
+                                            <button id="buttonn" class=" fw-medium" data-bs-toggle="popover" data-bs-title="Added to Cart!" data-bs-content="Click Cart to see orders ">
+                                                Add to Cart
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="item-3" class="my-5">
+                            <h2 class="text-center py-3" style="font-family: Playfair; font-size: 25px;"><i>Cooldown
+                                With Our</i>
+                            <font style="color: #B64E21; font-family: Pacifico;font-size: 40px;"> Desserts
+                            </font>
+                            </h2>
+                            <font style="color: #B64E21; font-family: Pacifico;font-size: 30px;"> Dessert
+                            </font>
+                            <hr style="border: 2px solid #B64E21;" class="mb-5">
+                            <div class="card-group" style="gap: 0px 5px;">
+                                <div class="card">
+                                    <img src="assets/common/blue.jpg" class="card-img-top h-fluid" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="font-family: Playfair;font-style: italic; ">Blueberry Cheesecake</h5>
+                                        <p class="card-text" style="color: red;">₱ 75.00</p>
+                                        <a  style="color:#fff1e2; font-family: Quicksand; text-decoration: none; font-size: 17px; font-weight: 600;">
+                                            <button id="buttonn" class=" fw-medium" data-bs-toggle="popover" data-bs-title="Added to Cart!" data-bs-content="Click Cart to see orders ">
+                                                Add to Cart
+                                            </button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="assets/common/straw.jpg" class="card-img-top h-fluid" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="font-family: Playfair;font-style: italic; ">Strawberry Cheesecake</h5>
+                                        <p class="card-text" style="color: red;">₱ 75.00</p>
+                                        <a  style="color:#fff1e2; font-family: Quicksand; text-decoration: none; font-size: 17px; font-weight: 600;">
+                                            <button id="buttonn" class=" fw-medium" data-bs-toggle="popover" data-bs-title="Added to Cart!" data-bs-content="Click Cart to see orders ">
+                                                Add to Cart
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="assets/common/oreo.jpg" class="card-img-top h-fluid" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="font-family: Playfair;font-style: italic; ">Oreo Cheesecake</h5>
+                                        <p class="card-text" style="color: red;">₱ 90.00</p>
+                                        <a  style="color:#fff1e2; font-family: Quicksand; text-decoration: none; font-size: 17px; font-weight: 600;">
+                                            <button id="buttonn" class=" fw-medium" data-bs-toggle="popover" data-bs-title="Added to Cart!" data-bs-content="Click Cart to see orders ">
+                                                Add to Cart
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div id="item-4">
+
+                        </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+     <!----footer-->
+     <div class="container-fluid text-center  d-flex justify-content-center  py-5 border-2 border-top border-black">
+        <div class=" row container-md fw-bold">
+            <div class="col-md-4 " id="f0">
+                <a href="home.html#navi" style="font-family: Pacifico; text-decoration: none; color: #1D3557;">
+                    <h1>Framingo
+                </a></h1>
+                <p class="text-body-secondary">The Perfect Blend Of Food & Drink</p>
+            </div>
+            <div class="col-3  d-flex justify-content-center " id="f1">
+                <div>
+                    <ul style="list-style: none; text-transform:capitalize; " class="footer_nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"
+                                style="transform: none; color: #1D3557 ; cursor:default; font-size: 20px; margin-bottom: 10px;">NAVIGATION</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="about.html">Our Story</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="members.html">Members</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reviews.html">Reviews</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-3  d-flex justify-content-center  text-start " id="f2">
+                <div>
+                    <ul style="list-style: none; text-transform: capitalize;" class="footer_nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"
+                                style="transform: none; color: #1D3557 ; cursor:default; font-size: 20px; margin-bottom: 10px;">ABOUT
+                                FRAMINGO</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="#">FAQ</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">sponsor</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Privacy policy</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">cookies</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-2 " id="f3">
+
+                <ul style="list-style: none; text-transform:uppercase; display: flex; justify-content: center;"
+                    class="footer_nav">
+                    <div>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"
+                                style="transform: none; color: #1D3557 ; cursor:default; font-size: 20px; margin-bottom: 10px;">Follow
+                                Us</a>
+                        </li>
+                        <div class="d-flex">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-brands fa-facebook fs-2  mx-2"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-brands fa-instagram fs-2 mx-2"></i></a>
+                            </li>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+            <hr class="my-4">
+            <p class="text-body-secondary"><small>© Framingo, All Right Reserved.</small></p>
+        </div>
+    </div>
+</body>
+<script>
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+    var buttons = document.querySelectorAll('#buttonn');
+
+// Add event listener to each button
+buttons.forEach(function(button) {
+   button.addEventListener('click', function(event) {
+       // Get the card element
+       var card = event.target.closest('.card');
+
+       // Get the details of the food item
+       var foodItem = {
+           name: card.querySelector('.card-title').innerText,
+           price: parseInt(card.querySelector('.card-text').innerText.replace('₱', '')),
+           image: card.querySelector('.card-img-top').src,
+       };
+
+       // Get the current cart from localStorage
+       var cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+       // Check if the item is already in the cart
+       var existingItem = cart.find(function(item) {
+           return item.name === foodItem.name;
+       });
+
+       if (existingItem) {
+           // If the item is already in the cart, increment the quantity
+           existingItem.quantity++;
+       } else {
+           // If the item is not in the cart, add it with a quantity of 1
+           foodItem.quantity = 1;
+           cart.push(foodItem);
+       }
+
+       // Save the updated cart to localStorage
+       localStorage.setItem('cart', JSON.stringify(cart));
+   });
+   });
+   </script>
+
+</html>

@@ -1,0 +1,419 @@
+<html>
+    <header>
+        <title>
+            Framingo
+        </title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="/assets/common/logo.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </header>
+    <style>
+        body{
+            background-color: #FEFAE0;
+        }
+        .highlight{
+            background-color: #D4A373;
+        }
+        .foot{
+            background-color: #CCD5AE;
+            height: 1rem;
+        }
+        .main_adjust{
+            font-size: clamp(1.5rem, 3.3vw, 3rem);
+        }
+        .sub_adjust{
+            font-size: clamp(1rem, 3.3vw, 1.5rem);
+        }
+        .med_img{
+            width: 30vmax;
+        }
+        .img_bg{
+          background-color: #FAEDCD;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Quicksand;
+            background-color: #FFFCF3;
+            overflow-x: hidden;
+        }
+
+        nav ul li {
+            color: #1D3557;
+            transition: all 0.2s;
+            border-radius: 5px;
+        }
+
+        nav ul li:hover {
+            color: #1D3557;
+            background-color: #e9edc993;
+            transform: translateY(-3px);
+        }
+        .footer_nav li a {
+            width: fit-content;
+            color: rgb(104, 104, 104);
+            transition: transform 0.4s;
+        }
+
+        .footer_nav li a:hover {
+            transform: translateX(5px);
+            color: #ce693e;
+        }
+        @media (max-width:768px) {
+            #f1,#f2{
+            width: 50%;
+           }
+        }
+        .card_holder{
+            height: 400px;
+            overflow: hidden;
+            display: flex; 
+            justify-content: center;
+            align-items: center; 
+            object-fit: cover;
+        }
+        
+        @media (max-width: 992px) {
+            .card_holder img{
+                max-height: fit-content;
+            }
+        }
+        .btn-custom {
+            background-color: #ce693eaf; 
+            color: black; 
+            border: none; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            transition: background-color 0.3s, transform 0.3s; 
+        }
+
+        .btn-custom:hover {
+            background-color: #ce693e;
+            color: white; 
+            transform: translateY(-3px); 
+        }
+    </style>
+
+    <body id="navi">
+
+      <!-- nav -->
+      <div class="container-fluid border-2 border-bottom border-black"
+      style="position: sticky;top: 0;  z-index: 1030; background-color: #FFFCF3;" >
+      <nav class="navbar navbar-expand-lg m-0" style="position: sticky;top: 0;  z-index: 1030; ">
+          <div class="container-md ">
+              <a class="navbar-brand" href="home.html">
+                  <img src="assets/common/logo.png" alt="Logo" width="70" height="70" class="d-inline-block ">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                  aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 fw-bold mb-lg-0 w-100 d-flex justify-content-center ">
+                      <li class="nav-item px-2 mx-2">
+                          <a class="nav-link" aria-current="page" href="home.html">Home</a>
+                      </li>
+                      <li class="nav-item px-2 mx-2 ">
+                          <a class="nav-link" href="menu.html">Menu</a>
+                      </li>
+                      <li class="nav-item dropdown px-2 mx-2" style="background-color: #E9EDC9; border-radius: 5px;">
+                          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About Us
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li class="nav-item px-2 mx-2">
+                                  <a class="nav-link" href="about.html">Our Story</a>
+                              </li>
+                              <li class="nav-item px-2 mx-2" style="background-color: #E9EDC9; border-radius: 5px;">
+                                  <a class="nav-link active" href="members.html">Our Members</a>
+                              </li>
+                              <li class="nav-item px-2 mx-2">
+                                  <a class="nav-link" href="contact.html">Our Contact</a>
+                              </li>
+                          </ul>
+                        </li>
+                      
+                        <li class="nav-item dropdown px-2 mx-2">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Customer
+                          </a>
+                          <ul class="dropdown-menu ">
+                              <li class="nav-item px-2 mx-2">
+                                  <a class="nav-link" href="reviews.html">Reviews</a>
+                              </li>
+                              <li class="nav-item px-2 mx-2">
+                                  <a class="nav-link" href="profile.html">Profile</a>
+                              </li>
+                          </ul>
+                        </li>
+
+                  </ul>
+                  <a class="px-2 mx-2" style="text-decoration: none; color: #1D3557; cursor: pointer;"><i
+                          class="fa-solid fa-magnifying-glass"></i></a>
+                          <a href="cart.html" class="px-2 mx-2" style="text-decoration: none; color: #1D3557; cursor: pointer;">
+                            <i class="fa-solid fa-cart-shopping"></i></a>
+              </div>
+          </div>
+      </nav>
+      </div>
+
+        <!-- bread -->
+        <div class="container-fluid py-4">
+            <div class="container-md">
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                    <ol class="breadcrumb fw-bold">
+                      <li class="breadcrumb-item"><a href="home.html" style="color: #ce693e; text-decoration: none; ">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#" style="color: #ce693e; text-decoration: none; ">About Us</a></li>
+                      <li class="breadcrumb-item active text-body-secondary" aria-current="page">Members</li>
+                    </ol>
+                  </nav>
+                  <hr style=" border: 1px solid #D4A373;">
+            </div>
+        </div>
+
+        <!-- members -->
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-6 d-flex justify-content-center">
+                    <h2 class="text-center" style="font-family: Playfair; font-size: 25px;"><i>Meet The </i><br>
+                        <font style="color: #B64E21; font-family: Pacifico;font-size: 40px;"> People At Your Service</font>
+                        <hr style="border: 2px solid #B64E21; margin-left: 30%;margin-right: 30%;" >
+                    </h2>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- biggest container -->
+        <div class="container-fluid">
+            <div class="row justify-content-center m-5">
+                <div class="col-lg-10 col-md-8 col-sm-6">
+                    <div class="shadow-lg">
+                        <div class="row g-0">
+                          <div class="col-lg-5 d-flex justify-content-center img_bg">
+                            <img src="/assets/member/owner.jpg" class="img-fluid rounded-start" alt="...">
+                          </div>
+                          <div class="col-lg-7 align-content-center">
+                            <div class="card-body mx-md-5 p-3">
+                              <h2 class="main_adjust">Owner</h2>
+                              <p class="card-text sub_adjust">Alyssha Christaine Pascual</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- medium container -->
+        <div class="container-fluid">
+            <div class="row justify-content-center m-5 gy-5">
+                <div class="col-lg-5 col-md-6 col-sm-5">
+                    <div class="shadow-lg">
+                        <div class="row g-0">
+                          <div class="col-xl-6 col-lg-12 d-flex justify-content-center img_bg">
+                            <img src="/assets/member/manager.jpg" class="img-fluid med_img" alt="...">
+                          </div>
+                          <div class="col-xl-6 col-lg-12 align-content-center">
+                            <div class="card-body mx-xl-2 mx-md-5 p-3">
+                              <h2 class="card-title">Manager</h2>
+                              <p class="card-text">Christian Yu </p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-5">
+                    <div class="shadow-lg">
+                        <div class="row g-0">
+                          <div class="col-xl-6 col-lg-12 d-flex justify-content-center img_bg">
+                            <img src="gura.png" class="img-fluid med_img" alt="...">
+                          </div>
+                          <div class="col-xl-6 col-lg-12 align-content-center">
+                            <div class="card-body mx-xl-2 mx-md-5 p-3">
+                              <h2 class="card-title">[Manager]</h2>
+                              <p class="card-text">[Arthur Johhanson]</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- smallest container -->
+        <div class="container-fluid">
+            <div class="row justify-content-center m-5 gy-5">
+                <div class="col-xl-3 col-lg-5 col-md-6 col-sm-5">
+                    <div class="shadow-lg">
+                        <div class="row g-0">
+                          <div class="col-xl-6 col-lg-12 d-flex justify-content-center img_bg">
+                            <img src="gura.png" class="img-fluid med_img" alt="...">
+                          </div>
+                          <div class="col-xl-6 col-lg-12 align-content-center">
+                            <div class="card-body mx-xl-2 mx-md-5 p-3">
+                              <h2 class="card-title">[staff]</h2>
+                              <p class="card-text">[Arthur Johhanson]</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-5 col-md-6 col-sm-5">
+                    <div class="shadow-lg">
+                        <div class="row g-0">
+                          <div class="col-xl-6 col-lg-12 d-flex justify-content-center img_bg">
+                            <img src="gura.png" class="img-fluid med_img" alt="...">
+                          </div>
+                          <div class="col-xl-6 col-lg-12 align-content-center">
+                            <div class="card-body mx-xl-2 mx-md-5 p-3">
+                              <h2 class="card-title">[staff]</h2>
+                              <p class="card-text">[Arthur Johhanson]</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-5 col-md-6 col-sm-5">
+                    <div class="shadow-lg">
+                        <div class="row g-0">
+                          <div class="col-xl-6 col-lg-12 d-flex justify-content-center img_bg">
+                            <img src="gura.png" class="img-fluid med_img" alt="...">
+                          </div>
+                          <div class="col-xl-6 col-lg-12 align-content-center">
+                            <div class="card-body mx-xl-2 mx-md-5 p-3">
+                              <h2 class="card-title">[staff]</h2>
+                              <p class="card-text">[Arthur Johhanson]</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-5 col-md-6 col-sm-5">
+                    <div class="shadow-lg">
+                        <div class="row g-0">
+                          <div class="col-xl-6 col-lg-12 d-flex justify-content-center img_bg">
+                            <img src="gura.png" class="img-fluid med_img" alt="...">
+                          </div>
+                          <div class="col-xl-6 col-lg-12 align-content-center">
+                            <div class="card-body mx-xl-2 mx-md-5 p-3">
+                              <h2 class="card-title">[staff]</h2>
+                              <p class="card-text">[Arthur Johhanson]</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- paa -->
+        <div class="container-fluid text-center  d-flex justify-content-center  py-5 border-2 border-top border-black">
+          <div class=" row container-md fw-bold">
+              <div class="col-md-4 text-center " id="f0">
+                  <a href="home.html#navi" style="font-family: Pacifico; text-decoration: none; color: #1D3557;">
+                      <h1>Framingo
+                  </a></h1>
+                  <p class="text-body-secondary">The Perfect Blend Of Food & Drink</p>
+              </div>
+                      <div class="col-3  d-flex justify-content-center " id="f1">
+                          <div>
+                              <ul style="list-style: none; text-transform:capitalize; " class="footer_nav">
+                                  <li class="nav-item ">
+                                      <a class="nav-link" href="#"
+                                          style="transform: none; color: #1D3557 ; cursor:default; font-size: 20px; margin-bottom: 10px;">NAVIGATION</a>
+                                  </li>
+                                  <li class="nav-item ">
+                                      <a class="nav-link active" href="home.html">Home</a>
+                                  </li>
+                                  <li class="nav-item ">
+                                      <a class="nav-link" href="menu.html">Menu</a>
+                                  </li>
+                                  <li class="nav-item ">
+                                      <a class="nav-link" href="about.html">Our Story</a>
+                                  </li>
+                                  <li class="nav-item ">
+                                      <a class="nav-link" href="members.html">Members</a>
+                                  </li>
+                                  <li class="nav-item ">
+                                      <a class="nav-link" href="contact.html">Contact</a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link" href="profile.html">Profile</a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link" href="reviews.html">Reviews</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="col-3  d-flex justify-content-center  text-start "id="f2">
+                          <div>
+                              <ul style="list-style: none; text-transform: capitalize;" class="footer_nav">
+                                  <li class="nav-item ">
+                                      <a class="nav-link" href="#"
+                                          style="transform: none; color: #1D3557 ; cursor:default; font-size: 20px; margin-bottom: 10px;">ABOUT
+                                          FRAMINGO</a>
+                                  </li>
+                                  <li class="nav-item ">
+                                      <a class="nav-link active" href="#">FAQ</a>
+                                  </li>
+                                  <li class="nav-item ">
+                                      <a class="nav-link" href="#">sponsor</a>
+                                  </li>
+                                  <li class="nav-item ">
+                                      <a class="nav-link" href="#">Privacy policy</a>
+                                  </li>
+                                  <li class="nav-item ">
+                                      <a class="nav-link" href="#">cookies</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+  
+              <div class="col-md-2 text-center" id="f3">
+  
+                  <ul style="list-style: none; text-transform:uppercase; display: flex; justify-content: center;"
+                      class="footer_nav">
+                      <div>
+                          <li class="nav-item ">
+                              <a class="nav-link" href="#"
+                                  style="transform: none; color: #1D3557 ; cursor:default; font-size: 20px; margin-bottom: 10px;">Follow
+                                  Us</a>
+                          </li>
+                          <div class="d-flex">
+                              <li class="nav-item">
+                                  <a class="nav-link" href="#"><i class="fa-brands fa-facebook fs-2  mx-2"></i></a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="#"><i class="fa-brands fa-instagram fs-2 mx-2"></i></a>
+                              </li>
+                          </div>
+                      </div>
+                  </ul>
+              </div>
+  
+              <hr class="my-4">
+              <p class="text-body-secondary"><small>© Framingo, All Right Reserved.</small></p>
+          </div>
+      </div>
+    </body>
+</html>
